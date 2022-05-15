@@ -12,7 +12,7 @@ I am currently in the process of downloading and installing RuneAudio, which sho
 
 
 # Final Deliverables:
-## Project Title: Sounds (Almost) Good
+## Project Title: ***Sounds About Right***
 
 **Required Plugins:**
 
@@ -162,5 +162,14 @@ for {set x 0} {$x<10000000000} {incr x} {
 
 exit
 ```
-This file opens up the MPG 123 controller. It uses Expect to automate commands that would normally need to be typed by hand. It silences the verbose version of the player and loads the WALT 1610 web radio stream into the MPG 123 player. It then sends updates to the audio EQ of the stream multiple times per second. It is set to send the **RANDEQ.txt** file 4 times in a row, which updates the randomly assigned EQ spread. After those 4 EQ updates, it reverts to a fairly standard EQ setting with the **SEQ** feature, before looping and beginning again.
+This file opens up the MPG 123 controller. It uses Expect to automate commands that would normally need to be typed by hand. It silences the verbose version of the player and loads the WALT 1610 web radio stream into the MPG 123 player. It then sends updates to the audio EQ of the stream multiple times per second. It is set to send the **RANDEQ.txt** file 4 times in a row, which updates the randomly assigned EQ spread. After those 4 EQ updates, it reverts to a fairly standard EQ setting with the **SEQ** feature, before looping and beginning again. The purpose behind this occasional audio clarity is to constantly remind the listener of what the stream is supposed to sound like, which contrasts with the chaos of what is actually playing.
+
+## Documentation:
+[Link to sample audio](https://www.youtube.com/watch?v=KKD7A6xHxi8) 
+
+
+## Credits:
+This project was primarily inspired by an exhibit I had the joy of experiencing at the Renwick Galley, titled *Indigo Views* by Rowland Ricketts.
+
+
 
