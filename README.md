@@ -11,14 +11,33 @@ I am currently in the process of downloading and installing RuneAudio, which sho
 
 
 
-Final Deliverables:
+# Final Deliverables:
+## Project Title: Sounds (Almost) Good
 
-Plugins:
+**Required Plugins:**
+
  -MPG123 webstream audio player
+ 
  -Expect Shell Script Command
+ 
 
-Filename: RANDOMEQ.py
+**Two files need to be added to a Raspberry Pi to run this radio:**
 
+[RANDOMEQ.py](#randomeqpy)
+
+[test.exp](#testexp)
+
+## Controls:
+To start the radio player, connect to a Raspberry Pi via SSH or a monitor. Allow permissions with the "chmod" command, and then run the **RANDOMEQ.py** script perpectually in the background.
+```
+chmod +x ./RANDOMEQ.py
+```
+```
+sudo python3 RANDOMEQ.py &
+```
+Here's what that **RANDOMEQ.py** file looks like:
+
+## RANDOMEQ.py
 ```
 import time
   
@@ -57,7 +76,52 @@ while(True):
     time.sleep(0.25)
     
 ```
-Filename: test.exp
+
+This is a looping program that updates a file called **RANDEQ.txt** every 0.25 seconds. It is able to loop in the background because of the ampersand at the end of the sudo command. Once **RANDOMEQ.py** is in motion, it does not need to be adjusted or updated; it will run on its own in the background.
+
+Here's what the file that **RANDOMEQ.py** repeatedly overwrites looks like:
+
+## RANDEQ.txt
+```
+0 0
+0 1
+0 0
+1 0
+1 0
+0 1
+1 1
+1 0
+1 1
+1 0
+0 0
+1 1
+1 0
+0 1
+1 0
+1 0
+0 0
+0 1
+0 0
+0 0
+1 0
+0 1
+0 0
+0 1
+0 0
+0 0
+1 0
+1 1
+0 1
+0 1
+0 0
+0 1
+```
+
+The **RANDEQ.txt** file has two columns of 32 numbers. Each row represents a different equalizer band that is read by the MPG 123 audio player. A 0 means no sound is played at that frequency, and a 1 means that sound is played normally at that frequency. MPG 123 plays in stereo, so the left column controls the left audio, and the right column controls the right audio. 
+
+## test.exp
+Next, the file **test.exp** needs to be run. **test.exp** is a bash script that uses Expect commands. Here is what that file looks like:
+
 ```
 #!/usr/bin/expect -f
 
@@ -98,46 +162,5 @@ for {set x 0} {$x<10000000000} {incr x} {
 
 exit
 ```
+This file opens up the MPG 123 controller. It uses Expect to automate commands that would normally need to be typed by hand. It silences the verbose version of the player and loads the WALT 1610 web radio stream into the MPG 123 player. It then sends updates to the audio EQ of the stream multiple times per second. It is set to send the **RANDEQ.txt** file 4 times in a row, which updates the randomly assigned EQ spread. After those 4 EQ updates, it reverts to a fairly standard EQ setting with the **SEQ** feature, before looping and beginning again.
 
-Filename: RANDEQ.txt
-```
-0 0
-0 1
-0 0
-1 0
-1 0
-0 1
-1 1
-1 0
-1 1
-1 0
-0 0
-1 1
-1 0
-0 1
-1 0
-1 0
-0 0
-0 1
-0 0
-0 0
-1 0
-0 1
-0 0
-0 1
-0 0
-0 0
-1 0
-1 1
-0 1
-0 1
-0 0
-0 1
-```
-Controls:
-To start the radio player, run the RANDOMEQ.py script perpectually in the background with
-```
-sudo python3 RANDOMEQ.py &
-```
-This is a looping program that repeatedly updates the RANDEQ.txt file. It is able to loop in the background due to the ampersand at the end.
-The RANDEQ.txt file has two columns of 32 numbers. Each row represents a different equalizer band that is read by the MPG 123 audio player. A 0 means no sound is played at that frequency, and a 1 means that sound is played normally at that frequency. MPG 123 plays in stereo, so the left column controls the left audio, and the right column controls the right audio.
