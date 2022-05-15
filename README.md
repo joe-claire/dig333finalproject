@@ -77,7 +77,7 @@ while(True):
     
 ```
 
-This is a looping program that updates a file called **RANDEQ.txt** every 0.25 seconds. It is able to loop in the background because of the ampersand at the end of the sudo command. Once **RANDOMEQ.py** is in motion, it does not need to be adjusted or updated; it will run on its own in the background.
+This is a looping program that updates a file called **RANDEQ.txt** every 0.25 seconds. It is able to loop in the background because of the ampersand at the end of the sudo command. Once **RANDOMEQ.py** is in motion, it does not need to be adjusted.
 
 Here's what the file that **RANDOMEQ.py** repeatedly overwrites looks like:
 
