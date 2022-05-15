@@ -166,10 +166,11 @@ This file opens up the MPG 123 controller. It uses Expect to automate commands t
 
 ## Documentation:
 [Link to sample audio](https://www.youtube.com/watch?v=KKD7A6xHxi8) 
+Because I recorded this sample audio from a speaker with a microphone, you can't hear the stereo as well as if you had headphones on. Still, you can get a sense of how familiar yet jarring this auditory experience is.
 
 
 ## Credits:
-This project was primarily inspired by an exhibit I had the joy of experiencing at the Renwick Galley, titled *Indigo Views* by Rowland Ricketts.
+This project was primarily inspired by an exhibit I had the joy of experiencing at the Renwick Galley, titled *Indigo Views* by Rowland Ricketts. This piece uses light sensors to manipulate audio in real time. My initial plan was to incorporate light sensors to control the radio stream audio EQ, but this idea eventually morphed into EQ being changed at random. 
 
 
 
