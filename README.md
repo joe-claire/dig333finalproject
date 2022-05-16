@@ -14,6 +14,25 @@ I am currently in the process of downloading and installing RuneAudio, which sho
 # Final Deliverables:
 ## Project Title: ***Sounds About Right***
 
+The outcome of this project was far from what I originally intended to create, but I still learned so much about physical computing (and specifically coding) in the process. Throughout my time at Davidson, I've been an active member and leader with the student radio station, WALT 1610. Radio is now an obsolete platform of communication and entertainment with the increasing personalization and media control that has developed since the advent of the smartphone. Why listen to the radio when you can play whatever you want, whenever you want, without the nuisance of advertisements via a music streaming app? WALT Radio used to have an FM station, but we were later bumped down to an AM station, which we no longer have. Now we solely rely on a web stream. I find our current situation to be somewhat comical and ironic. It takes dedication to go through the work of pulling up an online radio stream on your phone instead of opening Spotify. It also takes dedication for the radio hosts to put on a show week after week for an average audience of six listeners–most of which are family members. In the age of immediacy,  I think that this unusual position inspired me to use WALT Radio for my DIG 333 final project because it is already both useful and incredibly useless. 
+
+The useful side of my project is that I did create a functional radio. It still successfully plays music from a radio station. It is also useful in that there are a variety of settings that may be used to either enhance or detract from the listening experience.
+
+My project is useless in that the audio played through my radio player is unpleasant to listen to. It makes an already outdated medium even more unusable. However, it is still playing music and playing it clearly enough that one can recognize songs they know.
+
+**Materials:**
+
+ -Raspberry Pi with power cord
+ 
+ -Laptop or monitor with HDMI cord, mouse, and keyboard
+ 
+ -Headphones or speaker with AUX cord
+ 
+ -Ethernet cord or WiFi capapbilities on the Raspberry Pi
+ 
+ -SD card
+ 
+
 **Required Plugins:**
 
  -MPG123 webstream audio player
